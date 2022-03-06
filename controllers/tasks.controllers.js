@@ -1,20 +1,23 @@
 const getTasks = (req,res) => {
-    res.json("This is GET")
+    res.json({tasks: []})
 }
 const createTask = (req,res) => {
     res.json("This is POST")
 }
 
 const getTaskById = (req, res) => {
-    res.json("This is GET task_id")
+    taskId = req.params
+    res.json({id:taskId})
 }
 
 const updateTask = (req, res) => {
-    res.json("This is PUT task_id")
+    taskId = req.params
+    res.json({id:taskId})
 }
 
 const deleteTask = (req, res) => {
-    res.json("This is DELETE task_id")
+    taskId = req.params
+    res.json({id:taskId})
 }
 
 module.exports = {
